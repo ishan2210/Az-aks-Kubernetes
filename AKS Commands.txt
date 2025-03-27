@@ -1,0 +1,29 @@
+kubectl get nodes 
+kubectl get nodes -o wide
+kubectl get pods my-portfolio-rs-6mpk6 -o yaml
+
+---------------------------------------------------------------
+$SubscriptionId = "5ab765e5-b9c8-44e9-8fb4-25ab27a035a8"
+Set-AzContext -SubscriptionId $SubscriptionId
+-------------------------------
+az login 
+
+az account list --output table
+
+az account set --subscription "MyEnabledSub"
+
+az account show --output table
+
+az aks get-credentials --resource-group AKS-RG --name devapp
+--------------------------------------------------------
+docker build -t ishan221002/mynginx_image1:v1 .
+
+docker run --name mynginx1 -p 80:80 -d ishan221002/mynginx_image1:v1
+
+docker tag ishan221002/mynginx_image1:v1 ishan221002/mynginx_image1:v1-release
+
+docker push ishan221002/mynginx_image1:v1-release       
+
+
+
+

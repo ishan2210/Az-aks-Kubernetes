@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: my-portfolio-rs
+  labels:
+    app: my-portfolio
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-portfolio
+  template:
+    metadata:
+      labels:
+        app: my-portfolio
+    spec:
+      containers:
+      - name: my-portfolio-app
+        image: ishan221002/mynginx_image2:v1-release
+
+        
